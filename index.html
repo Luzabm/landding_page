@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Landing Page</title>
-    <script>
-        function exibirAlerta() {
-            alert("Cadastro realizado com sucesso!");
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>Landing Page</title>
+<script>
+function exibirAlerta() {
+    alert("Formulário realizado com sucesso!");
+
+    var form = document.querySelector("form");
+    form.reset();
+}
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.querySelector("form");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        exibirAlerta();
+    });
+});
+</script>
 </head>
 <body>
     <header>
@@ -21,7 +33,9 @@
             <ul>
                 <a class="nav-item" href="#sobre"><li>Sobre</li></a>
                 <a class="nav-item" href="#filmes"><li>Filmes mais conhecidos</li></a>
-                <a class="nav-item" href="#conta"><li>Cadastre-se</li></a>
+                <a class="nav-item" href="#colaboradores"><li>Colaboradores</li></a>
+                <a class="nav-item" href="#premios"><li>Prêmios</li></a>
+                <a class="nav-item" href="#contato"><li>Entre em Contato</li></a>
             </ul>
         </nav>
     </header>
@@ -41,9 +55,12 @@
         </section>
         <section id="sobre">
             <img src="./assets/img/martinScorsese.png" alt="outra foto do Martin Scorsese">
-            <h3>O diretor norteamericano Martin Scorsese nasceu em Nova York no dia 17 de novembro de 1942.<br> Além da direção de filmes, atividade pela qual se consagrou no mundo todo, também trabalhou como ator, produtor e roteirista.<br> Ele tinha descendência italiana e cresceu em Little Italy, um bairro perigoso onde conheceu os arquétipos que criou em muitos de seus filmes.<br> Os italianos mafiosos, pequenos criminosos de rua, donos de cantinas, mães super protetoras, garotas problemáticas, prostitutas e todo universo que seus olhos infantes conferiram.<br> Na época, a grande paixão do pequeno Scorsese era o mundo cinematográfico.<br> Havia pequenas matinées organizadas pelo cinema de seu bairro e Martin era figura constante nas salas de exibição.</h3>
+            <div class="texto">
+                <h3>O diretor norteamericano Martin Scorsese nasceu em Nova York no dia 17 de novembro de 1942.<br> Além da direção de filmes, atividade pela qual se consagrou no mundo todo, também trabalhou como ator, produtor e roteirista.<br> Ele tinha descendência italiana e cresceu em Little Italy, um bairro perigoso onde conheceu os arquétipos que criou em muitos de seus filmes.<br> Os italianos mafiosos, pequenos criminosos de rua, donos de cantinas, mães super protetoras, garotas problemáticas, prostitutas e todo universo que seus olhos infantes conferiram.<br> Na época, a grande paixão do pequeno Scorsese era o mundo cinematográfico.<br> Havia pequenas matinées organizadas pelo cinema de seu bairro e Martin era figura constante nas salas de exibição.</h3>
+            </div>
         </section>
         <section id="filmes">
+            <h1>Filmes mais conhecidos</h1>
             <div class="card-container">
                 <div class="card">
                     <div class="inner-card">
@@ -51,6 +68,7 @@
                             <img src="./assets/img/taxiDriver.png" alt="Taxi Driver">
                         </div>
                         <div class="back">
+                            <h3>sinopse</h3>
                             <p>O motorista de táxi de Nova York Travis Bickle, veterano da Guerra do Vietnã, reflete constantemente sobre a corrupção da vida ao seu redor e sente-se cada vez mais perturbado com a própria solidão e alienação. Apesar de não conseguir fazer contato emocional com ninguém e viver uma vida questionável em busca de diversão, ele se torna obcecado em ajudar uma prostituta de 12 anos que entra em seu táxi para fugir de um cafetão.</p>
                         </div>
                     </div>
@@ -61,6 +79,7 @@
                             <img src="./assets/img/goodFellas.png" alt="Os Bons Companheiros">
                         </div>
                         <div class="back">
+                            <h3>sinopse</h3>
                             <p>Um jovem cresce na máfia e trabalha arduamente para crescer entre seus companheiros. Ele gosta da vida de dinheiro e luxo, mas não liga para o horror que provoca. Infelizmente, a dependência de drogas e alguns erros finalmente destroem sua escalada até o topo. Baseado no livro Wiseguy por Nicholas Pileggi.</p>
                         </div>
                     </div>
@@ -71,6 +90,7 @@
                             <img src="./assets/img/touro.png" alt="O Touro Indomável">
                         </div>
                         <div class="back">
+                            <h3>sinopse</h3>
                             <p>O filme conta a história de um boxeador de peso médio e suas vitórias até ter a sua primeira oportunidade de ser campeão da sua categoria. Ele se apaixona por uma linda garota do Bronx, mas a incapacidade de expressar seus sentimentos eventualmente atrapalha sua vida profissional, o que lhe custa tudo.</p>
                         </div>
                     </div>
@@ -81,6 +101,7 @@
                             <img src="./assets/img/infiltrados.png" alt="Os infiltrados">
                         </div>
                         <div class="back">
+                            <h3>sinopse</h3>
                             <p>Billy Costigan, um jovem policial, recebe a missão de se infiltrar na máfia, no grupo comandado por Frank Costello. Billy conquista sua confiança ao mesmo tempo em que Colin Sullivan, um criminoso que atuou na polícia como informante de Costello, também ascende dentro da corporação. Tanto Billy quanto Colin se sentem aflitos devido à vida dupla que levam. Mas, quando a máfia e a polícia descobrem que há um espião entre eles, a vida de ambos passa a correr perigo.</p>
                         </div>
                     </div>
@@ -91,6 +112,7 @@
                             <img src="./assets/img/irlandes.png" alt="O Irlandês">
                         </div>
                         <div class="back">
+                            <h3>sinopse</h3>
                             <p>Na década de 1950, o caminhoneiro Frank Sheeran se envolve com Russell Bufalino e sua família criminosa. Enquanto Sheeran sobe na hierarquia para se tornar um assassino, ele também trabalha para Jimmy Hoffa, um homem poderoso do submundo.</p>
                         </div>
                     </div>
@@ -101,31 +123,93 @@
                             <img src="./assets/img/lobo.png" alt="O Lobo De Wall Street">
                         </div>
                         <div class="back">
+                            <h3>sinopse</h3>
                             <p>Jordan Belfort é um ambicioso corretor da bolsa de valores que cria um verdadeiro império, enriquecendo de forma rápida, porém ilegal. Ele e seus amigos mergulham em um mundo de excessos, mas seus métodos ilícitos despertam a atenção da polícia.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section id="colaboradores">
+            <h1>Colaboradores</h1>
+            <div class="colaborador">
+                <img src="./assets/img/robertDeNiro.jpg" alt="Robert De Niro">
+                <h3>Robert De Niro</h3>
+                <p>Ator principal em diversos filmes de Scorsese, como "Taxi Driver", "Touro Indomável", "O Irlandês" e o mais recente "Assasssinos da Lua das Flores".</p>
+            </div>
+            <div class="colaborador">
+                <img src="./assets/img/joePesci.jpg" alt="Joe Pesci">
+                <h3>Joe Pesci</h3>
+                <p>Atuou em vários filmes de Scorsese, incluindo "Os Bons Companheiros" e "O Irlandês".</p>
+            </div>
+            <div class="colaborador">
+                <img src="./assets/img/leonardoDicaprio.jpg" alt="Leonardo DiCaprio">
+                <h3>Leonardo DiCaprio</h3>
+                <p>Colaborou com Scorsese em filmes como "O Lobo de Wall Street", "Ilha do Medo" e "Assassino da Lua das Flores".</p>
+            </div>
+            <div class="colaborador">
+                <img src="./assets/img/victorArgo.jpg" alt="Victor Argo">
+                <h3>Victor Argo</h3>
+                <p>Colaborou com Scorsese em filmes como "Taxi Driver" e "New York Stories".</p>
+            </div>
+            <div class="colaborador">
+                <img src="./assets/img/harveyKeitel.jpg" alt="Harvey Keitel">
+                <h3>Harvey Keitel</h3>
+                <p>Obteve 6 aparições nos filmes de Scorsese, como em "O Irlandês", "Taxi Driver" e "The Last Temptation of Christ".</p>
+            </div>
+            <div class="colaborador">
+                <img src="./assets/img/harryNorthup.jpg" alt="Harry Northup">
+                <h3>Harry Northup</h3>
+                <p>Suas participações costumam ser breves, geralmente algo em torno de duas cenas, as vezes seu personagens nem tem nome. Em "Alice Não Mora Mais Aqui", por exemplo, ele interpreta o “bartender”.</p>
+            </div>
+        </section>
+        <section id="premios">
+            <h1>Prêmios e Reconhecimentos</h1>
+            <div class="premio">
+                <div class="premio">
+                    <h3>Oscar de Melhor Diretor</h3>
+                    <p>Martin Scorsese ganhou o Oscar de Melhor Diretor por seu trabalho em "Os Infiltrados" (2006).</p>
+                </div>
+                <div class="premio">
+                    <h3>Leão de Ouro</h3>
+                    <p>Recebeu o Leão de Ouro no Festival de Veneza por sua contribuição excepcional ao cinema.</p>
+                </div>
+                <div class="premio">
+                    <h3>Palm d'Or</h3>
+                    <p>Ganhou o prêmio Palm d'Or no Festival de Cannes por "Taxi Driver" (1976).</p>
+                </div>
+                <div class="premio">
+                    <h3>Globo de Ouro de Melhor Diretor</h3>
+                    <p>Scorsese foi premiado com o Globo de Ouro de Melhor Diretor por "O Aviador" (2004).</p>
+                </div>
+                <div class="premio">
+                    <h3>BAFTA de Melhor Diretor</h3>
+                    <p>Recebeu o BAFTA de Melhor Diretor por "Gangues de Nova York" (2002).</p>
+                </div>
+                <div class="premio">
+                    <h3>Prêmio Bodil - Melhor Filme Americano</h3>
+                    <p>Recebeu o Prêmio Bodil de Melhor Filme Americano por "A Época da Inocência"(1994).</p>
+                </div>
+        </section>
         <br>
-        <section id="conta">
-            <article id="register-form">
-                <center><h3>Registre-se para mais novidades!</h3></center>
-                <div class="input-wrapper">
-                    <label for="complete-name">Nome completo: </label>
-                    <input type="text" id="complete-name">
+        <section id="contato">
+            <h1>Entre em Contato</h1>
+            <form>
+                <div class="campo-formulario">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
                 </div>
-                <div class="input-wrapper">
-                    <label for="mail">E-mail: </label>
-                    <input type="email" id="mail">
+                <div class="campo-formulario">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-                <div class="input-wrapper">
-                    <label for="password">Senha: </label>
-                    <input type="password" id="password">
+                <div class="campo-formulario">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
                 </div>
-                <button id="register-button" onclick="exibirAlerta()">Cadastrar</button>
-            </article>
-        </section>  
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
     <footer>
         <a href="https://github.com/Luzabm">Veja meus outros trabalhos!</a>
