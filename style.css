@@ -378,8 +378,25 @@ footer {
     background-color: #374058;
     color: #fff;
 }
-
 footer a {
     color: #fff;
     text-decoration: none;
 }
+
+ @media only screen and (max-width: 768px) {
+        header nav {
+            flex-direction: column;
+            align-items: center;
+        }
+        header ul {
+            margin-top: 10px;
+            flex-direction: column;
+            text-align: center;
+        }
+        .card {
+            width: 100%;
+        }
+        form {
+            width: 100%;
+        }
+    }
