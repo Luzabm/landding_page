@@ -406,9 +406,13 @@ footer a {
         max-width: 100%;
     }
 
-    #sobre .texto {
+    #sobre img {
+        width: 100%;
+    
+    }
+     
+    .texto {
         padding: 0 10px;
-    }    
 
     .card {
         width: 100%;
