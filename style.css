@@ -28,6 +28,10 @@ header nav ul li {
     display: inline;
 }
 
+main{
+    padding: 20px;
+}
+
 #hero {
     display: flex;
     justify-content: space-between;
@@ -88,6 +92,13 @@ header nav ul li {
     padding: 20px; 
 }
 
+#filmes h1 {
+    font-size: 32px; 
+    color: #f0f0f0; 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
 aside {
     max-width: 400px; 
     margin-top: 4  0px; 
@@ -110,24 +121,29 @@ aside h4 {
 }
 
 #sobre {
-    max-width: 800px; 
-    margin: 20px auto; 
-    padding: 20px; 
-    background-color: #fff; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 #sobre img {
-    max-width: 100%; 
-    border-radius: 10px; 
-    margin-bottom: 20px; 
+    width: 300px; 
+    height: 300px; 
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px; 
+    flex-shrink: 0;}
+
+.texto{
+    max-width: 800px;
 }
 
 #sobre h3 {
-    font-size: 20px; 
-    color: #374058; 
-    margin-bottom: 10px; 
+    line-height: 1.6;
+    margin: 0;
 
 }
 
@@ -139,6 +155,7 @@ aside h4 {
     background-color: #374058;
     margin-top: 5px; 
 }
+
 
 .card-container {
     display: flex;
@@ -198,45 +215,161 @@ aside h4 {
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-#register-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    background-color: #fff;
+.back h3{
+    margin-bottom: 10px;
+    font-size: 18px; 
+    color: #374058;
 }
 
-.input-wrapper {
+.back p{
+    font-size: 14px; 
+    color: #000; 
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 1px solid #374058; 
+}
+
+.card:hover .front img {
+    filter: brightness(1.2); 
+}
+
+#premios {
+    background-color: #f0f0f0;
+
+}
+#premios h1 {
+    font-size: 32px;
+    color: #374058;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.premio {
     margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.premio h3 {
+    font-size: 20px;
+    color: #374058;
+    margin-bottom: 5px;
+}
+.premio p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-top: 5px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#colaboradores {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    
 }
 
-button {
+#colaboradores h1 {
+    font-size: 32px;
+    color: #374058;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.colaborador {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.colaborador img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.colaborador h3 {
+    font-size: 20px;
+    color: #374058;
+    margin-bottom: 5px;
+}
+
+.colaborador p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+#contato {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contato h1 {
+    font-size: 32px;
+    color: #374058;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campo-formulario {
+    margin-bottom: 15px;
     width: 100%;
-    padding: 10px;
-    background-color: #374058;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    max-width: 400px;
 }
 
-button:hover {
-    background-color: #2a3144;
+.campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #374058;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #374058;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background-color: #293847;
 }
 
 footer {
