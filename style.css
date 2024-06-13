@@ -406,9 +406,13 @@ footer a {
         max-width: 100%;
     }
 
+    #sobre{
+        text-align: center;
+    }
+
     #sobre img {
-        width: 100%;
-    
+        width: 80%;
+        max-width: 150px;
     }
      
     .texto {
