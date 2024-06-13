@@ -408,15 +408,17 @@ footer a {
 
     #sobre{
         text-align: center;
+        padding: 10px;
     }
 
     #sobre img {
-        width: 80%;
-        max-width: 150px;
+        max-width: 80%;
+        margin-bottom: 10px;
     }
      
     .texto {
         padding: 0 10px;
+        
 
     .card {
         width: 100%;
