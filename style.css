@@ -383,7 +383,7 @@ footer a {
     text-decoration: none;
 }
 
- @media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1800px) {
     header nav {
         flex-direction: column;
         align-items: center;
@@ -406,19 +406,35 @@ footer a {
         max-width: 100%;
     }
 
+    #sobre h3::after {
+        width: 40rem;
+        text-align: center;
+        justify-content: center;
+    }
+
     #sobre{
         text-align: center;
         padding: 10px;
     }
 
+
     #sobre img {
         max-width: 100%;
-        margin-bottom: 20px;
+        margin-right: -35rem;
+        margin-top: -25rem;
     }
      
     .texto {
-        padding: 0 10px;
-        
+        display: flex;
+        margin-top: 26rem;
+        margin-right: -16rem;
+        width: 100rem;
+        padding: 0 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    
 
     .card {
         width: 100%;
